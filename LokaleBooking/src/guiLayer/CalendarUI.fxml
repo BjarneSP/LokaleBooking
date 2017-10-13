@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="calendarPane" maxWidth="818.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiLayer.CalendarUICtrl">
+   <children>
+      <Button fx:id="showMapBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToMap" onMouseClicked="#goToMap" text="Show map" />
+      <Button fx:id="createBtn" layoutX="716.0" layoutY="20.0" mnemonicParsing="false" onAction="#createBtnClicked" prefHeight="25.0" prefWidth="72.0" text="Create" />
+      <TableView fx:id="calendarTable" layoutX="37.0" layoutY="88.0" prefHeight="351.0" prefWidth="751.0" />
+      <ChoiceBox fx:id="dDropDown" layoutX="225.0" layoutY="20.0" prefWidth="150.0" />
+      <TextField fx:id="studenNoField" alignment="CENTER" layoutX="524.0" layoutY="20.0" promptText="studentNo" />
+      <Label fx:id="studentNoErrorLabel" layoutX="542.0" layoutY="58.0" text="Studentno. not found" textFill="RED" />
+   </children>
+</AnchorPane>

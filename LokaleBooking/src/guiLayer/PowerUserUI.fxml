@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiLayer.PowerUserUICtrl">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="14.0" layoutY="14.0" prefHeight="374.0" prefWidth="566.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="userTab" closable="false" text="Brugere">
+            <content>
+              <AnchorPane fx:id="userPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="searchTxtField" alignment="CENTER" layoutX="330.0" layoutY="24.0" promptText="studienr/brugernavn" />
+                        <Button fx:id="searchBtn" layoutX="507.0" layoutY="24.0" mnemonicParsing="false" onAction="#importUser" onMouseClicked="#importUser" text="Søg" />
+                        <Label layoutX="53.0" layoutY="79.0" text="Fornavn" />
+                        <Label layoutX="53.0" layoutY="113.0" text="Lastname" />
+                        <Label layoutX="53.0" layoutY="144.0" text="Email" />
+                        <ChoiceBox fx:id="userTypeChoiceBox" layoutX="144.0" layoutY="180.0" prefHeight="27.0" prefWidth="167.0" />
+                        <Label layoutX="53.0" layoutY="176.0" text="Type" />
+                        <TextField fx:id="emailTxtField" layoutX="144.0" layoutY="139.0" />
+                        <TextField fx:id="lastNameTxtField" layoutX="144.0" layoutY="108.0" />
+                        <TextField fx:id="firstNameTxtField" layoutX="144.0" layoutY="74.0" />
+                        <Pane fx:id="powerUserPane" layoutX="53.0" layoutY="215.0" prefHeight="131.0" prefWidth="287.0" visible="false">
+                           <children>
+                              <Label layoutX="4.0" layoutY="14.0" text="Brugernavn" />
+                              <Label layoutX="4.0" layoutY="42.0" text="Kodeord" />
+                              <TextField fx:id="puIDTxtField" layoutX="91.0" layoutY="9.0" prefHeight="27.0" prefWidth="167.0" />
+                              <TextField fx:id="puPassTxtField" layoutX="91.0" layoutY="46.0" prefHeight="27.0" prefWidth="167.0" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="studentPane" layoutX="41.0" layoutY="227.0" prefHeight="95.0" prefWidth="289.0" visible="false">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Studienummer" />
+                              <TextField fx:id="studentNoTxtField" layoutX="103.0" layoutY="9.0" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="createBtn" layoutX="401.0" layoutY="82.0" mnemonicParsing="false" onAction="#createUser" onMouseClicked="#createUser" prefHeight="63.0" prefWidth="122.0" text="Opret" />
+                        <Button fx:id="deleteBtn" layoutX="401.0" layoutY="153.0" mnemonicParsing="false" onAction="#deleteUser" onMouseClicked="#deleteUser" prefHeight="63.0" prefWidth="122.0" text="Slet" />
+                        <Button fx:id="updateBtn" layoutX="401.0" layoutY="227.0" mnemonicParsing="false" onAction="#updateUser" onMouseClicked="#updateUser" prefHeight="63.0" prefWidth="122.0" text="Opdater" />
+                        <Label fx:id="errorLabel" layoutX="136.0" layoutY="28.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="institutionTab" closable="false" text="Institutioner">
+            <content>
+              <AnchorPane fx:id="institutionPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TreeView fx:id="treeView" layoutX="26.0" layoutY="28.0" prefHeight="311.0" prefWidth="396.0" AnchorPane.leftAnchor="18.0" />
+                        <Button fx:id="updateInstBtn" layoutX="431.0" layoutY="243.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="151.0" text="Opdater">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteInstBtn" layoutX="431.0" layoutY="136.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="151.0" text="Slet">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="createInstBtn" layoutX="431.0" layoutY="28.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="151.0" text="Opret" AnchorPane.rightAnchor="18.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="bookingsTab" closable="false" text="Reservationer">
+              <content>
+                <AnchorPane fx:id="bookingPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="bookingsTable" prefHeight="372.0" prefWidth="477.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

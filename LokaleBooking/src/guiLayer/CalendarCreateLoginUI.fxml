@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="calendarLoginPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiLayer.CalendarCreateLoginUICtrl">
+   <children>
+      <Label fx:id="snLabel" layoutX="121.0" layoutY="171.0" text="Studienummer:" />
+      <TextField fx:id="snTextField" layoutX="226.0" layoutY="167.0" promptText="Studienummer" />
+      <Button fx:id="confirmBtn" layoutX="226.0" layoutY="200.0" mnemonicParsing="false" onAction="#confirmBtn" onMouseClicked="#confirmBtn" prefHeight="31.0" prefWidth="72.0" text="Bekræft" />
+      <Button fx:id="cancelBtn" layoutX="303.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToCalendar" onMouseClicked="#goToCalendar" prefHeight="31.0" prefWidth="72.0" text="Annuller" />
+   </children>
+</AnchorPane>
